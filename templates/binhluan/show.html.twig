@@ -1,0 +1,38 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Binhluan{% endblock %}
+
+{% block body %}
+    <h1>Binhluan</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ binhluan.id }}</td>
+            </tr>
+            <tr>
+                <th>Noidungbinhluan</th>
+                <td>{{ binhluan.noidungbinhluan }}</td>
+            </tr>
+            <tr>
+                <th>Fullname</th>
+                <td>{{ binhluan.fullname }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ binhluan.email }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ binhluan.title }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_binhluan_index') }}">back to list</a>
+
+    <a href="{{ path('app_binhluan_edit', {'id': binhluan.id}) }}">edit</a>
+
+    {{ include('binhluan/_delete_form.html.twig') }}
+{% endblock %}

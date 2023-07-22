@@ -1,0 +1,16 @@
+{# create.html.twig #}
+
+{% extends 'base_admin.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_row(form.tieude) }}
+    {{ form_row(form.noidung) }}
+
+    {{ form_row(form.hinh) }}
+    {{ form_row(form.tacgia) }}
+    {{ form_row(form.theloai) }}
+
+    <input type="submit" name="docbao_create" value="Create" class="btn btn-primary"/>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block body %}
+
+    <a href="{{ path('app_docbao') }}" class="btn btn-default">Back to Todo List</a>
+    <hr/>
+    <h2 class="page-header">{{ baiviet.id }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">tieu de: {{ baiviet.tieude }}</li>
+        <li class="list-group-item">noidung: {{ baiviet.noidung }}</li>
+        <li class="list-group-item">Ngay cuat abn: <strong>{{ baiviet.ngayxuatban|date('F j,Y, g:i a') }}</strong></li>
+
+        <img src="{{ asset('css/hinh/' ~ baiviet.getHinh()) }}" >
+    </ul>
+
+{% endblock %}
+
+

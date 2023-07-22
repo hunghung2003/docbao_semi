@@ -1,0 +1,41 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Baiviet index{% endblock %}
+
+{% block body %}
+    <h1>Baiviet index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tieude</th>
+                <th>Noidung</th>
+                <th>Ngayxuatban</th>
+                <th>Hinh</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for baiviet in baiviets %}
+            <tr>
+                <td>{{ baiviet.id }}</td>
+                <td>{{ baiviet.tieude }}</td>
+                <td>{{ baiviet.noidung }}</td>
+                <td>{{ baiviet.ngayxuatban }}</td>
+                <td>{{ baiviet.hinh }}</td>
+                <td>
+                    <a href="{{ path('app_baiviet_show', {'id': baiviet.id}) }}">show</a>
+                    <a href="{{ path('app_baiviet_edit', {'id': baiviet.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_baiviet_new') }}">Create new</a>
+{% endblock %}

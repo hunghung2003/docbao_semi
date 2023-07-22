@@ -1,0 +1,13 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Edit Binhluan{% endblock %}
+
+{% block body %}
+    <h1>Edit Binhluan</h1>
+
+    {{ include('binhluan/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_binhluan_index') }}">back to list</a>
+
+    {{ include('binhluan/_delete_form.html.twig') }}
+{% endblock %}

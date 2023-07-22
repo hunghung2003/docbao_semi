@@ -1,0 +1,39 @@
+{% extends 'base_admin.html.twig' %}
+{% block body %}
+    <div class="bs-example" data-example-id="striped-table">
+        <table class="table table-striped">
+
+
+
+            </head>
+
+            <tr>
+                <th>ID</th>
+                <th>Tieu de</th>
+                <th>Noi dung</th>
+                <th>hinh</th>
+                <th>Ngay Dang</th>
+                <th>Do</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for baiviet in baiviet %}
+                <tr>
+                    <th scope="row">{{ baiviet.id }}</th>
+                    <td>{{ baiviet.tieude }}</td>
+                    <td>{{ baiviet.noidung }}</td>
+                    <td>{{ baiviet.hinh }}</td>
+
+
+
+                    <td>
+                        <a href="{{ path('docbao_details', {'id': baiviet.id}) }} " class='btn btn-success'>View</a>
+                        <a href="{{ path('docbao_delete', {'id': baiviet.id}) }}" class='btn btn-danger'>Delete</a>
+                        <a href="{{ path('docbao_create', {'id': baiviet.id}) }}" class='btn btn-danger'>Edit</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
