@@ -38,12 +38,51 @@
     https://templatemo.com/tm-590-topic-listing
 
     -->
+
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #4CAF50;
+        }
+        h7 {
+            text-align: center;
+            width: 100%;
+            border: 2px solid purple;
+            border-radius: 4px;
+            background-color: #58257b;
+
+
+        }
+    </style>
 </head>
 
 <body id="top">
-
-<main>
+<input>
     {% block header %}
+
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
@@ -63,7 +102,7 @@
                     <ul class="navbar-nav ms-lg-5 me-lg-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link " href="http://127.0.0.1:8000/">Home</a>
+                            <a class="nav-link " href="http://127.0.0.1:8000/home/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="http://127.0.0.1:8000/new">new</a>
@@ -118,9 +157,9 @@
 
 
         {% block body %}
-            <h1>Create new Binhluan</h1>
+            <h1>Post Comments</h1>
+           <h7>{{ include('binhluan/_form.html.twig') }}</h7>
 
-            {{ include('binhluan/_form.html.twig') }}
 
 
         {% endblock %}
