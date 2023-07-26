@@ -3,36 +3,36 @@
 {% block title %}Baiviet{% endblock %}
 
 {% block body %}
-    <h1>Baiviet</h1>
+    <h1>Bài viết</h1>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th>ID</th>
                 <td>{{ baiviet.id }}</td>
             </tr>
             <tr>
-                <th>Tieude</th>
+                <th>Tiêu đề</th>
                 <td>{{ baiviet.tieude }}</td>
             </tr>
             <tr>
-                <th>Noidung</th>
+                <th>Nội dung</th>
                 <td>{{ baiviet.noidung }}</td>
             </tr>
             <tr>
-                <th>Ngayxuatban</th>
+                <th>Ngày xuất bản</th>
                 <td>{{ baiviet.ngayxuatban }}</td>
             </tr>
             <tr>
-                <th>Hinh</th>
+                <th>Hình</th>
                 <td>{{ baiviet.hinh }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_baiviet_index') }}">back to list</a>
+    <a href="{{ path('app_baiviet_index') }}">Back to list</a>
 
-    <a href="{{ path('app_baiviet_edit', {'id': baiviet.id}) }}">edit</a>
+    <a href="{{ path('app_baiviet_edit', {'id': baiviet.id}) }}">Edit</a>
 
     {{ include('baiviet/_delete_form.html.twig') }}
 {% endblock %}

@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Topic Listing Bootstrap 5 Template</title>
+        <title>Baomoi.com</title>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,6 +80,11 @@
                 <div class="d-none d-lg-block">
                     <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
                 </div>
+                <form>
+                    <a class="btn btn-secondary" href="/{{ app.user ? 'logout' : 'login' }}" @click="isOpen = false">
+                        {{ app.user ? 'logout' : 'login'}}
+                    </a>
+                </form>
             </div>
         </div>
     </nav>
@@ -103,6 +108,7 @@
                                 <button type="submit" class="form-control">Search</button>
                             </div>
                         </form>
+
                     </div>
 
                 </div>

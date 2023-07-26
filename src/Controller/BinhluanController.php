@@ -31,7 +31,6 @@ class BinhluanController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $binhluanRepository->save($binhluan, true);
 
-            return $this->redirectToRoute('app_home', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('binhluan/new.html.twig', [

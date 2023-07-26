@@ -1,12 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello NguoidangController!{% endblock %}
+
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+
 
     <!DOCTYPE html>
     <html>
@@ -34,8 +31,10 @@
             }
 
             .card {
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
                 margin: 8px;
+                text-align: center;
+
             }
 
             .about-section {
@@ -70,7 +69,9 @@
                 cursor: pointer;
                 width: 100%;
             }
-
+            .hinhanh{
+                text-align: center;
+            }
             .button:hover {
                 background-color: #555;
             }
@@ -80,27 +81,27 @@
                     width: 100%;
                     display: block;
                 }
+
             }
         </style>
     </head>
     <body>
 
     <div class="about-section">
-        <h1>About Us Page</h1>
-        <p>Some text about who we are and what we do.</p>
-        <p>Resize the browser window to see that this page is responsive by the way.</p>
+        <h1>GIỚI THIỆU BAOMOI.COM</h1>
+        <p>Baomoi là một website tổng hợp thông tin tiếng Việt hoàn toàn được điều khiển tự động bởi máy tính. Mỗi ngày gần 6500 tin tức từ gần 200 nguồn chính thức của các báo điện tử và trang tin điện tử Việt Nam được Baomoi tự động tổng hợp, phân loại, phát hiện các bài đăng lại, nhóm các bài viết liên quan và hiển thị theo sở thích đọc tin của từng độc giả.</p>
     </div>
 
-    <h2 style="text-align:center">Our Team</h2>
+    <h2 style="text-align:center; color: #badce3 ">Đại diện của chúng tôi</h2>
     <div class="row">
         <div class="column">
             <div class="card">
-                <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+                <img  src="https://lynamde.net/wp-content/uploads/2022/06/Vo-Huan-Hoa-Hong-2-e1677573220383.jpg" alt="Jane" style="width:100%;">
                 <div class="container">
                     <h2>Jane Doe</h2>
-                    <p class="title">CEO & Founder</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>jane@example.com</p>
+                    <p >CEO & Founder</p>
+                    <p></p>
+                    <p>janehuanrose@pro.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -108,12 +109,13 @@
 
         <div class="column">
             <div class="card">
-                <img src="../w3images/team2.jpg" alt="Mike" style="width:100%">
+                <img src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/324082310_1907908732884749_1262243997685875383_n.jpg?_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=174925&_nc_ohc=nEVD6BDWbfAAX_BvoEi&_nc_ht=scontent.fsgn5-10.fna&oh=00_AfAXDD8lPlW9MuLAwVgSN1sbndgjZ964w-UJ_i9T1T3D4g&oe=64C567CA" style="width:100%">
+
                 <div class="container">
                     <h2>Mike Ross</h2>
                     <p class="title">Art Director</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>mike@example.com</p>
+
+                    <p>mikeloge@gmail.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -121,12 +123,12 @@
 
         <div class="column">
             <div class="card">
-                <img src="../w3images/team3.jpg" alt="John" style="width:100%">
+                <img src="https://danviet.mediacdn.vn/upload/2-2019/images/2019-04-02/Vi-sao-Kha-Banh-tro-thanh-hien-tuong-dinh-dam-tren-mang-xa-hoi-khabanh-1554192528-width660height597.jpg" alt="John" style="width:100%">
                 <div class="container">
                     <h2>John Doe</h2>
                     <p class="title">Designer</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>john@example.com</p>
+                    <p></p>
+                    <p>johnokhai11@oal.com</p>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>

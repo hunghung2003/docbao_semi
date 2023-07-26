@@ -1,3 +1,7 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+details_show:
+    path: /details/{id}
+    controller: App\Controller\DetailsController::detailsAction
+    methods: [GET]

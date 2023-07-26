@@ -42,10 +42,10 @@
                     <ul class="navbar-nav me-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="http://127.0.0.1:8000/binhluan">Binh luan manager</a>
+                            <a class="nav-link" href="http://127.0.0.1:8000/binhluan">Quản lý bình luận</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://127.0.0.1:8000/baiviet">Bai viet manager</a>
+                            <a class="nav-link" href="http://127.0.0.1:8000/baiviet">Quản lý bài viết</a>
                         </li>
 
 
@@ -54,6 +54,11 @@
                     <form class="d-flex">
                         <input class="form-control me-sm-2" type="search" placeholder="Search">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <form>
+                        <a class="btn btn-secondary" href="/{{ app.user ? 'logout' : 'login' }}" @click="isOpen = false">
+                            {{ app.user ? 'logout' : 'login'}}
+                        </a>
                     </form>
                 </div>
             </div>

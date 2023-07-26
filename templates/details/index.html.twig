@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <style>
+        .hinh {
+            width: 30%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            float: left;
+        }
+
+        .btn-doc-truyen {
+            margin-top: 20px;
+        }
+
+    </style>
+    <th scope="row">{{ baiviet.id }}</th>
+    <td>{{ baiviet.tieude }}</td>
+    <td><img class="hinh" src="{{ asset('hinh/' ~ baiviet.getHinh()) }}" alt="{{ baiviet.getTieude() }}"></td>
+    <td>{{ baiviet.noidung }}</td>
+    <td>{{ baiviet.tacgia }}</td>
+
+
+
+    {% block chapter_content %}{% endblock %}
+
+{% endblock %}

@@ -3,16 +3,16 @@
 {% block title %}Binhluan index{% endblock %}
 
 {% block body %}
-    <h1>Binhluan index</h1>
+    <h1>Danh sách bình luận</h1>
 <style>
 
 </style>
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Noidungbinhluan</th>
-                <th>Fullname</th>
+                <th>ID</th>
+                <th>Nội dung bình luận</th>
+                <th>Tên người bình luận</th>
                 <th>Email</th>
                 <th>Title</th>
                 <th>actions</th>
@@ -27,8 +27,8 @@
                 <td>{{ binhluan.email }}</td>
                 <td>{{ binhluan.title }}</td>
                 <td>
-                    <a href="{{ path('app_binhluan_show', {'id': binhluan.id}) }}">show</a>
-                    <a href="{{ path('app_binhluan_edit', {'id': binhluan.id}) }}">edit</a>
+                    <a href="{{ path('app_binhluan_show', {'id': binhluan.id}) }}">Show</a>
+                    <a href="{{ path('app_binhluan_edit', {'id': binhluan.id}) }}">Edit</a>
                 </td>
             </tr>
         {% else %}
